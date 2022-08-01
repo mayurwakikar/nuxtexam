@@ -40,7 +40,8 @@
                     <option value="shoes">Red Chief Leather</option>
                     <option value="shoes">Loafers</option>
                 </select>
-
+                <div><a href="productform">Add Products</a></div>
+                <div><a href="mainform">Shoe Category</a></div>
             </a> 
         </nav>
         <div>

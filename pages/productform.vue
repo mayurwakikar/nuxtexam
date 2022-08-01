@@ -3,54 +3,55 @@
     <title>
         Productlist Project
     </title>
-    <h1>Form To Add Products</h1>
-    <div>
+    <h1 class="text-center font-bold text-5xl mt-4">Form To Add Products</h1>
+    <hr class="mt-5 border-1 border-black">
+    <div class="border-4 bg-gray-100 mr-60 ml-60 p-6 border-solid border-black rounded-md mt-6 ">
         <form action="">
-            <div>
-                <label for="pname">Product Name</label>
-                <input type="text" v-model="formdata.pname" name="pname" id="pname">
+            <div class="p-1 ">
+                <label class="font-bold text-xl mr-16" for="pname">Product Name</label>
+                <input  class="ml-16 border-2 px-32" type="text" v-model="formdata.pname" name="pname" id="pname">
             </div>
-            <div>
-                <label for="price">Product Price</label>
-                <input type="text" v-model="formdata.price" name="pname" id="price">
+            <div class="p-1 ">
+                <label class="font-bold text-xl mr-16" for="price">Product Price</label>
+                <input class="ml-16 border-2 px-32"  type="text" v-model="formdata.price" name="price" id="price">
             </div>
-            <div>
-                <label for="category">Product Category</label>
-                <input type="text" v-model="formdata.category" name="pname" id="">
+            <div class="p-1 ">
+                <label class="font-bold text-xl mr-16" for="category">Product Category</label>
+                <input class="ml-16 border-2 px-32"   type="text" v-model="formdata.category" name="category" id="category">
             </div>
-            <div>
-                <label for="color">Product color</label>
-                <input type="text" v-model="formdata.color" name="pname" id="">
+            <div class="p-1 ">
+                <label class="font-bold text-xl mr-16" for="color">Product color</label>
+                <input class="ml-16 border-2 px-32"  type="text" v-model="formdata.color" name="color" id="color">
             </div>
-            <div>
-                <button type="submit" @click="addpro">Add Product</button>
-                <button type="reset">Reset</button>
+            <div class="p-1  mt-6">
+                <button  class="ml-16 border-2 font-bold mr-16 rounded-md bg-black text-blue-500 hover:bg-black hover: text-white p-2 text-center" type="submit" @click="addpro">Add Product</button>
+                <button class="ml-16 border-2 font-bold mr-16 rounded-md bg-black text-blue-500 hover:bg-black  text-white p-2 text-center" type="reset">Reset</button>
             </div>
         </form>
-        <table border="2">
+        <table border="2" class="border-2  bg-gray-100 mr-60 ml-32 p-6 border-solid border-black rounded-md mt-8 ">
             <tr>
-                <td>Product ID</td>
-                <td>Product Name </td>
-                <td>Product Price</td>
-                <td>Product Category</td>
-                <td>Product Color</td>
-                <td>Delete</td>
-                <td>Edit Data</td>
+                <td class="border-2  bg-gray-100 p-2 border-solid border-black rounded-md mt-8 font-bold">Product ID</td>
+                <td class="border-2  bg-gray-100 p-2 border-solid border-black rounded-md mt-8 font-bold">Product Name </td>
+                <td class="border-2  bg-gray-100 p-2 border-solid border-black rounded-md mt-8 font-bold">Product Price</td>
+                <td class="border-2  bg-gray-100 p-2 border-solid border-black rounded-md mt-8 font-bold">Product Category</td>
+                <td class="border-2  bg-gray-100 p-2 border-solid border-black rounded-md mt-8 font-bold">Product Color</td>
+                <td class="border-2  bg-gray-100 p-2 border-solid border-black rounded-md mt-8 font-bold">Delete</td>
+                <td class="border-2  bg-gray-100 p-2 border-solid border-black rounded-md mt-8 font-bold">Edit Data</td>
             </tr>
             <tr v-for="(item,i) in myarr" :key="item">
-                <td>{{item.id = i + 1}}</td>
-                <td>{{item.pname}}</td>
-                <td>{{item.price}}</td>
-                <td>{{item.category}}</td>
-                <td>{{item.color}}</td>
-                <td><button @click="deletepro(i)">Delete Product</button></td>
-                <td><button @click="editpro(i)">Edit</button></td>
+                <td class="border-2  bg-gray-100 p-2 border-solid border-black rounded-md mt-8">{{item.id = i + 1}}</td>
+                <td class="border-2  bg-gray-100 p-2 border-solid border-black rounded-md mt-8">{{item.pname}}</td>
+                <td class="border-2  bg-gray-100 p-2 border-solid border-black rounded-md mt-8">{{item.price}}</td>
+                <td class="border-2  bg-gray-100 p-2 border-solid border-black rounded-md mt-8">{{item.category}}</td>
+                <td class="border-2  bg-gray-100 p-2 border-solid border-black rounded-md mt-8">{{item.color}}</td>
+                <td class="border-2  bg-gray-100 p-2 border-solid border-black rounded-md mt-8"><button class=" border-2 font-bold rounded-md bg-red-300 text-blue-500 hover:bg-black  text-white p-2 text-center" @click="deletepro(i)">Delete Product</button></td>
+                <td class="border-2  bg-gray-100 p-2 border-solid border-black rounded-md mt-8"><button class=" border-2 font-bold rounded-md bg-red-300 text-blue-500 hover:bg-black  text-white p-2 text-center" @click="editpro(i)">Edit</button></td>
             </tr>
         </table>
         <div>
-            <label for="searchpro">Serach Product</label>
-            <input type="text" name="searchpro" id="searchpro">
-            <button type="search" @click="searchpro">Search</button>
+            <label class="font-bold text-xl mr-16" for="searchpro">Serach Product</label>
+            <input  class="ml-16 border-2 px-32" type="text" name="searchpro" id="searchpro">
+            <button class=" border-2 font-bold rounded-md bg-red-300 text-blue-500 hover:bg-black  text-white p-2 text-center" type="search" @click="searchpro">Search</button>
         </div>
     </div>
 </div>
