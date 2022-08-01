@@ -10,7 +10,7 @@
                 </tr>
                 <tr>
                     <td><label>Product Price :</label></td>
-                    <td><input type="number" v-model="formdata.price" class="bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 m-5"></td>
+                    <td><input type="text" v-model="formdata.price" class="bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 m-5"></td>
                 </tr>
                 <tr>
                     <td><label>Product Category:</label></td>
@@ -30,28 +30,28 @@
             </table>
         </form>
     </div>
-    <div class="bg-gray-300 col-span-2 flex">
-        <div class="m-10 h-52 w-52 border-4 border-black">
+    <div class="bg-gray-300 col-span-2 flex" v-for="(prod) in myarr" :key="prod">   
+        <div class="m-10 h-52 w-52 border-4 border-black" >
             <img src="assets/show1.jfif" class="h-45 w-45">
-            product Name: <b>{{myarr.pname}}</b>
-            Product price: <b>{{myarr.price}}</b>
-            Product Category <b>{{myarr.category}}</b>
-            Product Color <b>{{myarr.category}}</b>
-        </div>
-        <div class="m-10 h-52 w-52 border-4 border-black">
+            product Name: <b>{{formdata.pname}}</b>
+            Product price: <b>{{formdata.price}}</b>
+            Product Category <b>{{formdata.category}}</b>
+            Product Color <b>{{formdata.category}}</b>
+         </div>
+       <!-- <div class="m-10 h-52 w-52 border-4 border-black" >
             <img src="assets/show2.jfif" class="h-45 w-45"> 
-            product Name: <b>{{myarr.pname}}</b>
-            Product price: <b>{{myarr.price}}</b>
-            Product Category <b>{{myarr.category}}</b>
-            Product Color <b>{{myarr.category}}</b>
+            product Name: <b>{{formdata.pname}}</b>
+            Product price: <b>{{formdata.price}}</b>
+            Product Category <b>{{formdata.category}}</b>
+            Product Color <b>{{formdata.category}}</b>
         </div>
-        <div class="m-10 h-52 w-52 border-4 border-black" v-for="(prod) in myarr" :key="prod">
+        <div class="m-10 h-52 w-52 border-4 border-black" >
             <img src="assets/shoe3.jfif" class="h-45 w-45">
-            product Name: <b>{{myarr.pname}}</b>
-            Product price: <b>{{myarr.price}}</b>
-            Product Category <b>{{myarr.category}}</b>
-            Product Color <b>{{myarr.category}}</b>
-        </div>
+            product Name: <b>{{formdata.pname}}</b>
+            Product price: <b>{{formdata.price}}</b>
+            Product Category <b>{{formdata.category}}</b>
+            Product Color <b>{{formdata.category}}</b>
+        </div> -->
     </div>
 </div>
 </template>

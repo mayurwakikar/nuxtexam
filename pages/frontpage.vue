@@ -46,7 +46,7 @@
         </nav>
         <div>
             <div class="content text-center">
-            <img src="assets/show1.jfif" alt="showimage" >
+            <img src="assets/show1.jfif" alt="showimage" class="px-64  items-center">
             <h3>Shoes</h3>
             <p>This is Demo Show of Nike Brand</p>
             <h5>Rs 10,000/- only</h5>
@@ -60,8 +60,8 @@
             <button class="buy-1">Buy Now</button>
         </div>
         </div>
-        <div class="content">
-            <img src="assets/show2.jfif" alt="showimage">
+        <div class="content text-center">
+            <img src="assets/show2.jfif" alt="showimage" class="px-64  items-center">
             <h3>Shoes</h3>
             <p>This is 2nd Demo Show of Nike Brand</p>
             <h5>Rs 11,200/- only</h5>
@@ -74,8 +74,8 @@
             </ul>
             <button class="buy-2">Buy Now</button>
         </div>
-        <div class="content"> 
-            <img src="assets/shoe3.jfif" alt="showimage">
+        <div class="content text-center"> 
+            <img src="assets/shoe3.jfif" alt="showimage" class="px-64  items-center">
             <h3>Shoes</h3>
             <p>This is 3rd Demo Show of Nike Brand</p>
             <h5>Rs 11,500/- only</h5>
@@ -88,8 +88,8 @@
             </ul>
             <button class="buy-3">Buy Now</button>
         </div>
-        <div class="content">
-            <img src="assets/shoe4.jfif" alt="showimage">
+        <div class="content text-center">
+            <img src="assets/shoe4.jfif" alt="showimage" class="px-64  items-center">
             <h3>Shoes</h3>
             <p>This is 4th Demo Show of Nike Brand</p>
             <h5>Rs 13,200/- only</h5>
