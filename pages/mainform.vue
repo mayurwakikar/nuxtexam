@@ -73,6 +73,24 @@ export default {
     methods: {
         createNewCard() {
             this.myarr.push(this.formdata);
+        },
+        login(event){
+            event.preventDefault();
+            if (this.isEdit == true) {
+                this.myarr[this.indexEdit] = this.formdata;
+                this.isEdit = false;
+                this.indexEdit = -1;
+            } else {
+                this.myarr.push(this.formdata);
+            }
+            this.formdata = {
+                id: 0,
+                pname : "",
+                price : "",
+                category : "",
+                color: "",
+            }
+            console.log("Formdata is :", this.myarr);
         }
     }
 }
