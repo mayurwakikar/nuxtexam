@@ -11,7 +11,7 @@
                 </tr>
                 <tr>
                     <td><label>Product Price :</label></td>
-                    <td><input type="text" v-model="formdata.price" class="bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 m-5"></td>
+                    <td><input type="number" v-model="formdata.price" class="bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 m-5"></td>
                 </tr>
                 <tr>
                     <td><label>Product Category:</label></td>
@@ -24,7 +24,7 @@
                 <tr>
                     <td>
                         <button type="button" class=" border-solid font-extrabold rounded border-2 border-black p-3 bg-gray-300 bg-hover-black" @click="login">
-                            Submit
+                            Add To Cart
                         </button>
                     </td>
                 </tr>
@@ -53,6 +53,9 @@
             Product Category <b>{{formdata.category}}</b>
             Product Color <b>{{formdata.category}}</b>
         </div> -->
+        <div>
+            <h1 class="font-semibold text-center text-3xl p-2"><b>My Cart</b></h1>
+        </div>
     <table class="border-2  bg-gray-100 mr-60 ml-60 p-6 border-solid border-black rounded-md mt-4 ">
         <tr>
             <td class="border-2  bg-gray-100 p-2 border-solid border-black rounded-md mt-8 font-bold">ID</td>
