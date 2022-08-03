@@ -5,9 +5,9 @@
     </title>
     <h1 class="text-center font-semibold text-5xl mt-4 bg-blue-300">Form To Add Products</h1>
     <hr class="mt-5 border-1 border-black">
-    <div class="border-4 bg-gray-100 mr-60 ml-60 p-4 border-solid border-black rounded-md mt-6 ">
+    <div class="sm  border-4 bg-gray-100 mr-60 ml-60 p-4 border-solid border-black rounded-md mt-6 ">
         <form action="" name="myForm" onsubmit="return validateForm()" method="post" >
-            <div class="p-1">
+            <div class="justify-between p-1 sm">
                 <label class="font-semibold text-xl mr-16" for="pname">Product Name</label>
                 <input class="ml-16 border-2 px-32" type="text" v-model="formdata.pname" name="pname" id="pname" @change="validationName" required>
             </div>
@@ -44,15 +44,17 @@
                 <td class="border-2  bg-gray-100 p-2 border-solid border-black rounded-md mt-8">{{item.price}}</td>
                 <td class="border-2  bg-gray-100 p-2 border-solid border-black rounded-md mt-8">{{item.category}}</td>
                 <td class="border-2  bg-gray-100 p-2 border-solid border-black rounded-md mt-8">{{item.color}}</td>
-                <td class="border-2  bg-gray-100 p-2 border-solid border-black rounded-md mt-8"><button class=" border-2 font-bold rounded-md bg-red-300 text-blue-500 hover:bg-black  text-white p-2 text-center" @click="deletepro(i)">Delete Product</button></td>
-                <td class="border-2  bg-gray-100 p-2 border-solid border-black rounded-md mt-8"><button class=" border-2 font-bold rounded-md bg-red-300 text-blue-500 hover:bg-black  text-white p-2 text-center" @click="editpro(i)">Edit</button></td>
+                <td class="border-2  bg-gray-100 p-2 border-solid border-black rounded-md mt-8"><button class=" border-2 font-bold rounded-md bg-green-500 hover:bg-black  text-white p-2 text-center" @click="deletepro(i)">Delete</button></td>
+                <td class="border-2  bg-gray-100 p-2 border-solid border-black rounded-md mt-8"><button class=" border-2 font-bold rounded-md bg-green-500 hover:bg-black  text-white p-2 text-center" @click="editpro(i)">Edit</button></td>
             </tr>
         </table>
-        <div>
+        
+        <div >
             <label class="font-bold text-xl mr-16" for="searchpro">Search Product</label>
-            <input @keyup="userFindByAddress(userAddress)" v-model="this.userAddress" class="ml-16 border-2 px-32" type="text" name="searchpro" id="searchpro">
+            <input @keyup="userFindByAddress(userAddress)" v-model="this.userAddress" class="ml-2 mt-8 border-2 px-32" type="text" name="searchpro" id="searchpro">
             <!-- <button class=" border-2 font-bold rounded-md bg-red-300 text-blue-500 hover:bg-black  text-white p-2 text-center" type="search" @click="this.userFindByAddress(userAddress)">Search</button> -->
         </div>
+        <hr class="border-1 border-black">
         <!-- 2nd table  -->
         <table border="2" class="border-2  bg-gray-100 mr-60 ml-32 p-6 border-solid border-black rounded-md mt-8 ">
             <tr>
@@ -110,15 +112,16 @@ export default {
                     // alert("Name is valid");
             }
             // //vali price
-            // if( !isNaN(this.formdata.price) || this.formdata.price==null ){
-            //     // || this.formdata.price==""
-            //         alert("Please Enter price");
-            //         // console.log("Please Enter price");
-            //         this.resetForm();
-            // }else{
-            //     console.log(this.formdata.price);
-                    // alert("price is valid");
-            // }
+             if( isNaN(this.formdata.price) || this.formdata.price=="" ){
+            // if( !isNaN(this.formdata.price) || !this.formdata.price==null || !this.formdata.price==""  ){
+                // || this.formdata.price==""
+                    alert("Please Enter price");
+                    // console.log("Please Enter price");
+                    this.resetForm();
+            }else{
+                console.log(this.formdata.price);
+                    alert("price is valid");
+            }
             //vali cate
             if( !isNaN(this.formdata.category) || this.formdata.category==null || this.formdata.category==""){
                     alert("Please Enter category");
