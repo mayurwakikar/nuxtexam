@@ -114,7 +114,7 @@ export default {
                     // alert("Name is valid");
             }
             //vali price
-            if( !isNaN(this.formdata.price) || this.formdata.price==null || this.formdata.price==""){
+            if(  this.formdata.price==null || this.formdata.price==""){
                     alert("Please Enter price");
                     // console.log("Please Enter price");
                     this.resetForm();
